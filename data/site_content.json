@@ -1,18 +1,16 @@
 {
   "language": "pl",
-
   "hero": {
     "title": "Lukas Pub Dance Club",
-    "subtitle": "Imprezowe serce Łomży",
-    "description": "Lokalny pub i klub taneczny z parkietem, karaoke oraz bogatym wyborem drinków i przekąsek.",
+    "subtitle": "Nocny impuls Łomży",
+    "description": "Lokalny pub i klub taneczny z parkietem, karaoke, mocnym barem i imprezowym rytmem od czwartku do soboty.",
     "primary_cta": "Rezerwuj stolik",
     "secondary_cta": "Zobacz wydarzenia",
     "background_media": "club-crowd-video"
   },
-
   "about_club": {
     "title": "O klubie",
-    "description": "Lukas Pub Dance Club to miejsce spotkań, dobrej muzyki i nocnej zabawy w Łomży. Klub oferuje imprezy weekendowe, karaoke oraz szeroki wybór drinków i przekąsek w swobodnej, imprezowej atmosferze.",
+    "description": "Lukas Pub Dance Club to miejsce spotkań, dobrej muzyki i nocnej energii w Łomży. Karaoke, parkiet, drinki i jedzenie składają się tu na wieczór, który nie kończy się po pierwszym wejściu na salę.",
     "features": [
       "Parkiet taneczny",
       "Wieczory karaoke",
@@ -21,52 +19,44 @@
       "Imprezy weekendowe"
     ]
   },
-
   "events_section": {
     "title": "Wydarzenia",
     "subtitle": "Sprawdź co dzieje się w klubie",
-    "description": "W Lukas Pub regularnie odbywają się wydarzenia, które przyciągają gości spragnionych dobrej zabawy i muzyki."
+    "description": "Każdy tydzień ma tu swój rytm. Czwartek rozgrzewa głosy, a piątek i sobota przejmują noc pełnym imprezowym tempem."
   },
-
   "gallery": {
     "title": "Atmosfera klubu",
     "subtitle": "Zobacz jak wygląda noc w Lukas Pub",
-    "description": "Zdjęcia i materiały z imprez pokazujące klimat parkietu, muzyki i spotkań ze znajomymi."
+    "description": "Światła, parkiet, bar i ludzie. Te kadry mają pokazać nie tylko wnętrze, ale cały puls miejsca."
   },
-
   "menu_section": {
     "title": "Menu",
     "subtitle": "Drinki, piwo i przekąski",
-    "description": "Klub oferuje szeroki wybór drinków, piw, alkoholi oraz przekąsek idealnych na wieczór ze znajomymi.",
+    "description": "Od klasyki baru po koktajle i jedzenie na ekipę. Menu ma tu utrzymać tempo wieczoru, a nie tylko je uzupełnić.",
     "cta": "Zobacz pełne menu"
   },
-
   "vip_reservations": {
     "title": "Rezerwacja stolika",
-    "description": "Planujesz wieczór ze znajomymi? Zarezerwuj stolik i ciesz się imprezą bez stresu o miejsce.",
+    "description": "Wpadasz z ekipą na karaoke albo weekendowy parkiet? Zarezerwuj stolik wcześniej i wejdź w noc bez stresu o miejsce.",
     "cta": "Zarezerwuj stolik"
   },
-
   "location_section": {
     "title": "Lokalizacja",
     "subtitle": "Znajdziesz nas w Łomży",
-    "description": "Lukas Pub Dance Club znajduje się przy Alei Legionów 60B w Łomży. To miejsce, gdzie spotykają się miłośnicy dobrej muzyki i nocnej zabawy."
+    "description": "Aleja Legionów 60B. Tu zbiera się miejska energia, która szuka muzyki, ludzi i miejsca z charakterem."
   },
-
   "social_media": {
     "title": "Media społecznościowe",
     "subtitle": "Bądź na bieżąco",
-    "description": "Obserwuj klub w mediach społecznościowych, aby być na bieżąco z wydarzeniami i imprezami."
+    "description": "Zapowiedzi imprez, zdjęcia, relacje i klimat jeszcze zanim przekroczysz próg. Tutaj noc zaczyna się wcześniej."
   },
-
   "footer": {
-    "description": "Lukas Pub Dance Club – miejsce spotkań, muzyki i nocnej zabawy w Łomży.",
+    "description": "Lukas Pub Dance Club to lokalna nocna marka Łomży. Muzyka, parkiet, karaoke i spotkania, które zawsze mogą skończyć się później niż planowałeś.",
     "copyright": "© Lukas Pub Dance Club"
   },
-
   "seo": {
     "meta_title": "Lukas Pub Dance Club | Klub i pub w Łomży",
-    "meta_description": "Lukas Pub Dance Club w Łomży – karaoke, imprezy weekendowe, drinki i parkiet taneczny.",
+    "meta_description": "Lukas Pub Dance Club w Łomży. Karaoke w czwartki, imprezy weekendowe, drinki, bar i parkiet w jednym miejscu.",
     "keywords": [
       "klub Łomża",
       "dyskoteka Łomża",
@@ -75,7 +65,6 @@
       "pub Łomża"
     ]
   },
-
   "cta_global": {
     "reservation": "Rezerwuj stolik",
     "events": "Zobacz wydarzenia",

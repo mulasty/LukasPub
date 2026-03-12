@@ -20,13 +20,13 @@ const config: Config = {
         muted: "var(--color-text-secondary)"
       },
       fontFamily: {
-        headline: ["Bebas Neue", "Arial Narrow", "sans-serif"],
-        body: ["Inter", "Segoe UI", "sans-serif"]
+        headline: ["var(--font-headline)", "Impact", "sans-serif"],
+        body: ["var(--font-body)", "Segoe UI", "sans-serif"]
       },
       boxShadow: {
-        panel: "0 24px 80px rgba(0, 0, 0, 0.35)",
-        pink: "0 0 30px rgba(255, 0, 122, 0.28)",
-        blue: "0 0 30px rgba(0, 224, 255, 0.28)"
+        panel: "0 28px 90px rgba(0, 0, 0, 0.42)",
+        pink: "0 0 34px rgba(255, 59, 31, 0.28)",
+        blue: "0 0 34px rgba(0, 209, 255, 0.26)"
       },
       backgroundImage: {
         "hero-grid":
@@ -56,4 +56,3 @@ const config: Config = {
 };
 
 export default config;
-

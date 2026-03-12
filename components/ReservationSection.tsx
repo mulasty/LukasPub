@@ -27,25 +27,54 @@ export function ReservationSection({ content, clientProfile }: ReservationSectio
     try {
       await navigator.clipboard.writeText(summary);
       setStatusMessage(
-        "Szczegóły rezerwacji zostały skopiowane. Skontaktuj się telefonicznie lub przez Facebook, aby potwierdzić termin."
+        "Dane zostały skopiowane. Zadzwoń lub napisz na Facebooku, żeby potwierdzić stolik i godzinę wejścia."
       );
     } catch {
       setStatusMessage(
-        "Wypełnij formularz i skontaktuj się telefonicznie. Finalny sposób potwierdzania rezerwacji zależy od wybranego kanału kontaktu."
+        "Wypełnij formularz i skontaktuj się telefonicznie. Potwierdzenie rezerwacji nadal odbywa się bezpośrednio z obsługą."
       );
     }
   }
 
   return (
     <section id="reservation" className="section-shell section-space">
-      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-        <SectionHeading
-          eyebrow="Rezerwacje"
-          title={content.title}
-          description={content.description}
-        />
+      <div className="grid gap-8 xl:grid-cols-[0.84fr_1.16fr] xl:items-start">
+        <div className="space-y-8">
+          <SectionHeading
+            eyebrow="Rezerwacje"
+            title="Zbierz ekipę. Weź stolik."
+            description={content.description}
+          />
 
-        <div className="panel js-reveal">
+          <div className="poster-panel js-reveal space-y-5" data-parallax-y="18">
+            <p className="section-kicker">Jak to działa</p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-4">
+                <span className="poster-number !text-4xl !text-primary">01</span>
+                <div>
+                  <p className="text-lg text-text">Wrzucasz dane i termin.</p>
+                  <p className="text-sm leading-6 text-muted">Bez zbędnych ekranów i bez udawania automatu.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="poster-number !text-4xl !text-secondary">02</span>
+                <div>
+                  <p className="text-lg text-text">Kopiujesz gotowy pakiet rezerwacji.</p>
+                  <p className="text-sm leading-6 text-muted">Masz wszystko pod ręką do szybkiego potwierdzenia.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="poster-number !text-4xl !text-accent">03</span>
+                <div>
+                  <p className="text-lg text-text">Dzwonisz i zamykasz temat.</p>
+                  <p className="text-sm leading-6 text-muted">Prosto, lokalnie i bez zgadywania.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="panel js-reveal" data-parallax-y="24">
           <form className="grid gap-5" onSubmit={handleSubmit}>
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="field-shell">
@@ -68,9 +97,9 @@ export function ReservationSection({ content, clientProfile }: ReservationSectio
               </label>
             </div>
 
-            <div className="rounded-[1.5rem] border border-primary/20 bg-primary/5 p-4 text-sm leading-7 text-muted">
-              Na obecnym etapie potwierdzenie rezerwacji odbywa się przez telefon albo Facebook.
-              Formularz porządkuje dane i przygotowuje je do przekazania obsłudze.
+            <div className="rounded-[1.5rem] border border-primary/20 bg-primary/8 p-4 text-sm leading-7 text-muted">
+              Potwierdzenie rezerwacji odbywa się obecnie przez telefon albo Facebook.
+              Formularz porządkuje dane i przyspiesza kontakt z obsługą.
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">

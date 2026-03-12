@@ -43,63 +43,81 @@ export function Navbar({ brandName, uiLayout, siteContent, media }: NavbarProps)
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-[1.75rem] border border-white/10 bg-black/40 px-4 py-3 backdrop-blur-xl sm:px-5">
-        <a href="#hero" className="flex items-center gap-3">
-          {media.logoPath ? (
-            <span className="relative h-11 w-[9.5rem] overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-2">
-              <Image
-                src={media.logoPath}
-                alt={brandName}
-                fill
-                className="object-contain p-1"
-                sizes="152px"
-              />
-            </span>
-          ) : (
-            <span className="font-headline text-2xl uppercase tracking-[0.08em] text-text">
-              {brandName}
-            </span>
-          )}
-        </a>
+      <div className="section-shell">
+        <div className="flex items-center justify-between rounded-[1.8rem] border border-white/10 bg-black/55 px-4 py-3 shadow-panel backdrop-blur-xl sm:px-5">
+          <a href="#hero" className="flex items-center gap-4">
+            {media.logoPath ? (
+              <span className="relative h-11 w-[8.4rem] overflow-hidden rounded-[1.1rem] border border-white/10 bg-white/5">
+                <Image
+                  src={media.logoPath}
+                  alt={brandName}
+                  fill
+                  className="object-contain p-2"
+                  sizes="134px"
+                />
+              </span>
+            ) : (
+              <span className="font-headline text-3xl uppercase tracking-[0.08em] text-text">
+                {brandName}
+              </span>
+            )}
+            <div className="hidden md:block">
+              <p className="text-[0.68rem] uppercase tracking-[0.34em] text-muted">Łomża nightlife</p>
+              <p className="text-sm uppercase tracking-[0.18em] text-text">Aleja Legionów 60B</p>
+            </div>
+          </a>
 
-        <nav className="hidden items-center gap-2 md:flex">
-          {navLinks.map((link) => (
-            <a
-              key={link.id}
-              href={`#${link.id}`}
-              className="rounded-full px-4 py-2 text-sm text-muted transition hover:bg-white/5 hover:text-text"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <button
-          type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-text md:hidden"
-          aria-label="Otwórz menu"
-          onClick={() => setMenuOpen((value) => !value)}
-        >
-          <span className="text-lg">{menuOpen ? "x" : "+"}</span>
-        </button>
-      </div>
-
-      {menuOpen ? (
-        <div className="mx-auto mt-3 max-w-6xl rounded-3xl border border-white/10 bg-black/75 p-5 backdrop-blur-xl md:hidden">
-          <nav className="flex flex-col gap-4">
+          <nav className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={`#${link.id}`}
-                className="text-sm uppercase tracking-[0.18em] text-muted transition hover:text-text"
-                onClick={() => setMenuOpen(false)}
-              >
+              <a key={link.id} href={`#${link.id}`} className="nav-link">
                 {link.label}
               </a>
             ))}
           </nav>
+
+          <div className="hidden items-center gap-3 xl:flex">
+            <a href="#reservation" className="ghost-button">
+              Rezerwacja
+            </a>
+            <a href="#events" className="glow-button !px-5 !py-3">
+              Dzisiaj w klubie
+            </a>
+          </div>
+
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-text lg:hidden"
+            aria-label="Otwórz menu"
+            onClick={() => setMenuOpen((value) => !value)}
+          >
+            <span className="text-lg">{menuOpen ? "x" : "+"}</span>
+          </button>
         </div>
-      ) : null}
+
+        {menuOpen ? (
+          <div className="mt-3 rounded-[1.8rem] border border-white/10 bg-black/80 p-5 shadow-panel backdrop-blur-xl lg:hidden">
+            <div className="mb-5 rounded-[1.4rem] border border-white/8 bg-white/[0.03] p-4">
+              <p className="text-[0.68rem] uppercase tracking-[0.34em] text-accent">Łomża nightlife</p>
+              <p className="mt-2 font-headline text-3xl uppercase tracking-[0.08em] text-text">
+                Lukas Pub
+              </p>
+            </div>
+
+            <nav className="flex flex-col gap-3">
+              {navLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  className="rounded-[1rem] border border-white/8 px-4 py-4 text-sm uppercase tracking-[0.22em] text-muted transition hover:border-primary/30 hover:text-text"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        ) : null}
+      </div>
     </header>
   );
 }

@@ -194,6 +194,20 @@ export default function HomePage({
             data-parallax-y="36"
             className="absolute bottom-12 left-1/4 h-64 w-64 rounded-full bg-accent/10 blur-3xl"
           />
+          <div
+            data-parallax-y="18"
+            className="absolute left-[8%] top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-white/14 to-transparent xl:block"
+          />
+          <div
+            data-parallax-y="24"
+            className="absolute right-[10%] top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-white/10 to-transparent xl:block"
+          />
+          <div
+            data-parallax-x="-20"
+            className="absolute right-[-4rem] top-[22%] hidden rotate-90 font-headline text-[7rem] uppercase tracking-[0.18em] text-white/[0.04] xl:block"
+          >
+            Lomza nightlife
+          </div>
         </div>
 
         <Navbar
@@ -207,6 +221,7 @@ export default function HomePage({
           <HeroSection
             siteContent={siteData.siteContent.hero}
             clientProfile={siteData.clientProfile}
+            events={siteData.events}
             media={siteData.media}
           />
           <AboutSection
