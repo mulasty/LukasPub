@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-import type { SiteContent, UiLayout } from "@/lib/types";
+import Image from "next/image";
+
+import type { ResolvedMedia, SiteContent, UiLayout } from "@/lib/types";
 
 type TitledSectionKey =
   | "about_club"
@@ -23,9 +25,10 @@ interface NavbarProps {
   brandName: string;
   uiLayout: UiLayout;
   siteContent: SiteContent;
+  media: ResolvedMedia;
 }
 
-export function Navbar({ brandName, uiLayout, siteContent }: NavbarProps) {
+export function Navbar({ brandName, uiLayout, siteContent, media }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = uiLayout.navbar.links.map((link) => {
@@ -41,8 +44,21 @@ export function Navbar({ brandName, uiLayout, siteContent }: NavbarProps) {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border border-white/10 bg-black/35 px-5 py-3 backdrop-blur-xl">
-        <a href="#hero" className="font-headline text-2xl uppercase tracking-[0.12em] text-text">
-          {brandName}
+        <a href="#hero" className="flex items-center gap-3">
+          {media.logoPath ? (
+            <span className="relative h-10 w-20 overflow-hidden rounded-xl border border-white/10 bg-white/5 px-2">
+              <Image
+                src={media.logoPath}
+                alt={brandName}
+                fill
+                className="object-contain p-1"
+                sizes="80px"
+              />
+            </span>
+          ) : null}
+          <span className="font-headline text-2xl uppercase tracking-[0.12em] text-text">
+            {brandName}
+          </span>
         </a>
 
         <nav className="hidden items-center gap-6 md:flex">

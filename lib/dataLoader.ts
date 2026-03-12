@@ -62,14 +62,25 @@ function resolveMedia(
     ...resolvePublicAsset(`${imagesDir}/${image.file}`, placeholderImagePath)
   }));
 
+  const heroImageFile = mediaManifest.hero_image?.file?.trim();
+  const heroImageAsset = heroImageFile
+    ? resolvePublicAsset(`${imagesDir}/${heroImageFile}`, placeholderImagePath)
+    : { src: placeholderImagePath, isPlaceholder: true };
+
   const logoFile = mediaManifest.logo.file?.trim();
   const logoPath = logoFile
     ? resolvePublicAsset(`${imagesDir}/${logoFile}`, "/assets/images/logo-placeholder.svg").src
     : null;
+  const logoDarkFile = mediaManifest.logo_dark?.file?.trim();
+  const logoDarkPath = logoDarkFile
+    ? resolvePublicAsset(`${imagesDir}/${logoDarkFile}`, "/assets/images/logo-placeholder.svg").src
+    : null;
 
   return {
     heroVideoPath: heroVideo ? `${videosDir}/${heroVideo}` : null,
+    heroImagePath: heroImageAsset.src,
     logoPath,
+    logoDarkPath,
     galleryImages,
     menuImages,
     placeholderImagePath
@@ -105,4 +116,3 @@ export function loadSiteData(): SiteData {
     media: resolveMedia(mediaManifest, projectManifest)
   };
 }
-

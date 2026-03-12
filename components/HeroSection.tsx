@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import type { ClientProfile, ResolvedMedia, SiteContent } from "@/lib/types";
 
@@ -52,7 +53,16 @@ export function HeroSection({ siteContent, clientProfile, media }: HeroSectionPr
           >
             <source src={media.heroVideoPath} type="video/mp4" />
           </video>
-        ) : null}
+        ) : (
+          <Image
+            src={media.heroImagePath}
+            alt="Lukas Pub Dance Club"
+            fill
+            priority
+            className="object-cover opacity-45"
+            sizes="100vw"
+          />
+        )}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,224,255,0.18),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(255,0,122,0.24),transparent_24%),linear-gradient(160deg,rgba(11,11,15,0.2),rgba(11,11,15,0.95))]" />
         <div className="absolute inset-0 bg-hero-grid bg-[size:52px_52px] opacity-10" />
       </div>

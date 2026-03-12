@@ -226,6 +226,14 @@ export interface MediaManifest {
     notes: string;
     source_status: string;
   };
+  logo_dark?: {
+    file: string;
+    notes?: string;
+  };
+  hero_image?: {
+    file: string;
+    description?: string;
+  };
   gallery_images: Array<{
     name: string;
     file: string;
@@ -465,7 +473,9 @@ export interface ResolvedGalleryImage {
 
 export interface ResolvedMedia {
   heroVideoPath: string | null;
+  heroImagePath: string;
   logoPath: string | null;
+  logoDarkPath: string | null;
   galleryImages: ResolvedGalleryImage[];
   menuImages: Array<{
     name: string;

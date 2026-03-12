@@ -13,13 +13,23 @@
   },
 
   "logo": {
-    "file": "",
+    "file": "logo-white.jpg",
     "format_preferred": [
       "svg",
       "png"
     ],
     "notes": "Logo klubu do wykorzystania w hero oraz navbarze.",
     "source_status": "client_required"
+  },
+
+  "logo_dark": {
+    "file": "logo-black.jpg",
+    "notes": "Wersja logo na jasne tła i materiały pomocnicze."
+  },
+
+  "hero_image": {
+    "file": "hero-club.jpg",
+    "description": "Główne zdjęcie hero do użycia jako fallback, gdy nie ma video."
   },
 
   "gallery_images": [
@@ -54,6 +64,16 @@
       "name": "cocktails",
       "file": "cocktails.jpg",
       "description": "Zdjęcie drinków z menu"
+    },
+    {
+      "name": "signature_cocktail",
+      "file": "signature-cocktail-garden-smash.jpg",
+      "description": "Zdjęcie koktajlu firmowego"
+    },
+    {
+      "name": "aperol_spritz",
+      "file": "aperol-spritz.jpg",
+      "description": "Zdjęcie drinka Aperol Spritz"
     },
     {
       "name": "beer",

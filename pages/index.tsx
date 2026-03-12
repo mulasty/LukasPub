@@ -127,6 +127,7 @@ export default function HomePage({
           brandName={siteData.clientProfile.brand_name_preferred}
           uiLayout={siteData.uiLayout}
           siteContent={siteData.siteContent}
+          media={siteData.media}
         />
 
         <main className="relative z-10">
