@@ -26,7 +26,7 @@ export function AboutSection({
           <div className="panel overflow-hidden">
             <div className="grid gap-6 lg:grid-cols-[1fr_0.9fr]">
               <div className="space-y-4">
-                <p className="text-sm uppercase tracking-[0.24em] text-muted">Za co goscie lubia to miejsce</p>
+                <p className="text-sm uppercase tracking-[0.24em] text-muted">Za co goście lubią to miejsce</p>
                 <ul className="grid gap-3 text-base text-text">
                   {content.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
@@ -58,7 +58,7 @@ export function AboutSection({
               <p className="font-headline text-5xl tracking-[0.08em] text-primary">
                 {clientProfile.target_audience_hypothesis.primary_age_range}
               </p>
-              <p className="mt-3 text-sm uppercase tracking-[0.18em] text-muted">Glowna grupa gosci</p>
+              <p className="mt-3 text-sm uppercase tracking-[0.18em] text-muted">Główna grupa gości</p>
             </article>
             <article className="stat-card">
               <p className="font-headline text-5xl tracking-[0.08em] text-secondary">Thu</p>

@@ -60,7 +60,7 @@ export function Navbar({ brandName, uiLayout, siteContent }: NavbarProps) {
         <button
           type="button"
           className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-text md:hidden"
-          aria-label="Otworz menu"
+          aria-label="Otwórz menu"
           onClick={() => setMenuOpen((value) => !value)}
         >
           <span className="text-lg">{menuOpen ? "x" : "+"}</span>

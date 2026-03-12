@@ -115,9 +115,9 @@ export function HeroSection({ siteContent, clientProfile, media }: HeroSectionPr
                 </span>
               ))}
             </div>
-            <p className="text-sm uppercase tracking-[0.22em] text-muted">Warto wiedziec</p>
+            <p className="text-sm uppercase tracking-[0.22em] text-muted">Warto wiedzieć</p>
             <p className="text-2xl text-text">
-              Karaoke w czwartki od 19:00, parkiet i imprezowy weekend w samym sercu Lomzy.
+              Karaoke w czwartki od 19:00, parkiet i imprezowy weekend w samym sercu Łomży.
             </p>
             <div className="grid gap-3 text-sm text-muted sm:grid-cols-2">
               <div>
@@ -142,7 +142,7 @@ export function HeroSection({ siteContent, clientProfile, media }: HeroSectionPr
         href="#about_club"
         className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted sm:flex"
       >
-        Przewin
+        Przewiń
         <span className="h-14 w-px bg-gradient-to-b from-white/50 to-transparent" />
       </a>
     </section>

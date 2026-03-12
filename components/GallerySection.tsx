@@ -46,7 +46,7 @@ export function GallerySection({ content, images }: GallerySectionProps) {
                 <p className="text-base text-text">{image.description}</p>
                 {image.isPlaceholder ? (
                   <p className="text-sm text-muted">
-                    Miejsce na docelowe zdjecie klubu. Podmien po otrzymaniu materialow.
+                    Miejsce na docelowe zdjęcie klubu. Podmień po otrzymaniu materiałów.
                   </p>
                 ) : null}
               </figcaption>

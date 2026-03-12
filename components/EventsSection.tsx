@@ -5,11 +5,11 @@ import type { EventsData, SiteContent } from "@/lib/types";
 import { SectionHeading } from "@/components/SectionHeading";
 
 const dayLabels: Record<string, string> = {
-  monday: "Poniedzialek",
+  monday: "Poniedziałek",
   tuesday: "Wtorek",
-  wednesday: "Sroda",
+  wednesday: "Środa",
   thursday: "Czwartek",
-  friday: "Piatek",
+  friday: "Piątek",
   saturday: "Sobota",
   sunday: "Niedziela"
 };
@@ -21,7 +21,7 @@ const categoryLabels: Record<string, string> = {
 
 const confidenceLabels: Record<string, string> = {
   high: "potwierdzone",
-  medium: "czesciowo potwierdzone",
+  medium: "częściowo potwierdzone",
   low: "do potwierdzenia"
 };
 

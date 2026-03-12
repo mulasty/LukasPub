@@ -67,7 +67,7 @@ export function SocialFeedSection({
                   rel="noreferrer"
                   className="mt-8 inline-flex text-sm uppercase tracking-[0.18em] text-secondary transition hover:text-text"
                 >
-                  Otworz profil
+                  Otwórz profil
                 </a>
               ) : null}
             </article>

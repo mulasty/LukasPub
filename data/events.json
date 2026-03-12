@@ -4,10 +4,10 @@
   "weekly_events": [
     {
       "id": "karaoke-night",
-      "name": "Karaoke Night",
+      "name": "Czwartkowe Karaoke",
       "day": "thursday",
       "start_time": "19:00",
-      "description": "Wieczór karaoke prowadzony przez prowadzącego. Goście mogą śpiewać ulubione utwory i bawić się w klubowej atmosferze.",
+      "description": "Wieczór karaoke z klubowym klimatem i wspólną zabawą przy ulubionych hitach.",
       "category": "karaoke",
       "confidence": "high",
       "source": "multiple public Facebook announcements"
@@ -15,7 +15,7 @@
 
     {
       "id": "friday-club-night",
-      "name": "Friday Club Night",
+      "name": "Piątkowa impreza",
       "day": "friday",
       "start_time": "",
       "description": "Weekendowa impreza taneczna z muzyką klubową i parkietem dla gości.",
@@ -26,7 +26,7 @@
 
     {
       "id": "saturday-party",
-      "name": "Saturday Party",
+      "name": "Sobota na parkiecie",
       "day": "saturday",
       "start_time": "",
       "description": "Główna impreza weekendowa z DJ i parkietem tanecznym.",

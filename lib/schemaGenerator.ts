@@ -1,4 +1,5 @@
 import type { MenuData, OpeningHours, SiteData, WeeklyEvent } from "@/lib/types";
+import { getSiteUrl } from "@/lib/siteUrl";
 
 const weekdayMap: Record<string, string> = {
   monday: "https://schema.org/Monday",
@@ -10,6 +11,30 @@ const weekdayMap: Record<string, string> = {
   sunday: "https://schema.org/Sunday"
 };
 
+const menuSectionLabels: Record<string, string> = {
+  coffee_tea: "Kawa i herbata",
+  soft_drinks: "Napoje bezalkoholowe",
+  juices: "Soki",
+  energy_drinks: "Napoje energetyczne",
+  draft_beer: "Piwo lane",
+  bottled_beer: "Piwo butelkowe",
+  non_alcoholic_beer: "Piwo bezalkoholowe",
+  wine: "Wino",
+  rum: "Rum",
+  tequila: "Tequila",
+  gin: "Gin",
+  vodka: "Wódka",
+  whisky: "Whisky",
+  cocktails: "Koktajle klasyczne",
+  shots: "Shoty",
+  signature_cocktails: "Koktajle firmowe",
+  snacks: "Przekąski",
+  food: "Dania",
+  sharing_boards: "Deski do dzielenia",
+  salads: "Sałatki",
+  desserts: "Desery"
+};
+
 function compact<T extends Record<string, unknown>>(value: T) {
   return Object.fromEntries(
     Object.entries(value).filter(([, entry]) => entry !== "" && entry !== null && entry !== undefined)
@@ -19,7 +44,7 @@ function compact<T extends Record<string, unknown>>(value: T) {
 function buildMenuSections(menu: MenuData) {
   return Object.entries(menu.categories).map(([key, items]) => ({
     "@type": "MenuSection",
-    name: key.replace(/_/g, " "),
+    name: menuSectionLabels[key] || key.replace(/_/g, " "),
     hasMenuItem: items.map((item) => ({
       "@type": "MenuItem",
       name: item.name,
@@ -77,11 +102,16 @@ function buildOpeningHours(openingHours: OpeningHours) {
 
 export function generateSchema(siteData: SiteData) {
   const openingHours = buildOpeningHours(siteData.openingHours);
+  const siteUrl = getSiteUrl();
 
   const organization = compact({
     "@type": siteData.seoSchema.organization["@type"],
     name: siteData.seoSchema.organization.name || siteData.clientProfile.brand_name_preferred,
-    url: siteData.seoSchema.organization.url || siteData.clientProfile.contact.website || undefined,
+    url:
+      siteData.seoSchema.organization.url ||
+      siteData.clientProfile.contact.website ||
+      siteUrl ||
+      undefined,
     logo: siteData.seoSchema.organization.logo || siteData.media.logoPath || undefined,
     sameAs: siteData.seoSchema.organization.sameAs
   });
@@ -98,7 +128,7 @@ export function generateSchema(siteData: SiteData) {
       localBusiness,
       {
         "@type": siteData.seoSchema.menu_schema.schema_type,
-        name: `${siteData.clientProfile.brand_name_preferred} Menu`,
+        name: `Menu ${siteData.clientProfile.brand_name_preferred}`,
         hasMenuSection: buildMenuSections(siteData.menu)
       },
       ...siteData.events.weekly_events.map((event) => buildEventSchema(event, siteData))

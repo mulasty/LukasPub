@@ -15,23 +15,27 @@ import { ReservationSection } from "@/components/ReservationSection";
 import { SocialFeedSection } from "@/components/SocialFeedSection";
 import { loadSiteData } from "@/lib/dataLoader";
 import { generateSchema } from "@/lib/schemaGenerator";
+import { getSiteUrl } from "@/lib/siteUrl";
 import type { SiteData } from "@/lib/types";
 
-export const getStaticProps: GetStaticProps<{ siteData: SiteData; schema: string }> = async () => {
+export const getStaticProps: GetStaticProps<{ siteData: SiteData; schema: string; siteUrl: string }> = async () => {
   const siteData = loadSiteData();
   const schema = JSON.stringify(generateSchema(siteData));
+  const siteUrl = getSiteUrl();
 
   return {
     props: {
       siteData,
-      schema
+      schema,
+      siteUrl
     }
   };
 };
 
 export default function HomePage({
   siteData,
-  schema
+  schema,
+  siteUrl
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   useEffect(() => {
     let cleanup = () => undefined;
@@ -98,9 +102,14 @@ export default function HomePage({
         <meta name="description" content={siteContent.seo.meta_description} />
         <meta name="keywords" content={siteContent.seo.keywords.join(", ")} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {siteUrl ? <link rel="canonical" href={siteUrl} /> : null}
         <meta property="og:title" content={siteContent.seo.meta_title} />
         <meta property="og:description" content={siteContent.seo.meta_description} />
         <meta property="og:type" content="website" />
+        {siteUrl ? <meta property="og:url" content={siteUrl} /> : null}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={siteContent.seo.meta_title} />
+        <meta name="twitter:description" content={siteContent.seo.meta_description} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: schema }}

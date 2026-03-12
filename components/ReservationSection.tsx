@@ -17,21 +17,21 @@ export function ReservationSection({ content, clientProfile }: ReservationSectio
 
     const form = new FormData(event.currentTarget);
     const summary = [
-        `Rezerwacja: ${clientProfile.brand_name_preferred}`,
-      `Imie i nazwisko: ${form.get("name")}`,
+      `Rezerwacja: ${clientProfile.brand_name_preferred}`,
+      `Imię i nazwisko: ${form.get("name")}`,
       `Telefon: ${form.get("phone")}`,
-      `Liczba gosci: ${form.get("people")}`,
+      `Liczba gości: ${form.get("people")}`,
       `Data: ${form.get("date")}`
     ].join("\n");
 
     try {
       await navigator.clipboard.writeText(summary);
       setStatusMessage(
-        "Szczegoly rezerwacji zostaly skopiowane. Skontaktuj sie telefonicznie lub przez Facebook, aby potwierdzic termin."
+        "Szczegóły rezerwacji zostały skopiowane. Skontaktuj się telefonicznie lub przez Facebook, aby potwierdzić termin."
       );
     } catch {
       setStatusMessage(
-        "Wypelnij formularz i skontaktuj sie telefonicznie. Finalny sposob potwierdzania rezerwacji zalezy od wybranego kanalu kontaktu."
+        "Wypełnij formularz i skontaktuj się telefonicznie. Finalny sposób potwierdzania rezerwacji zależy od wybranego kanału kontaktu."
       );
     }
   }
@@ -49,8 +49,8 @@ export function ReservationSection({ content, clientProfile }: ReservationSectio
           <form className="grid gap-5" onSubmit={handleSubmit}>
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="field-shell">
-                <span>Imie i nazwisko</span>
-                <input name="name" type="text" required placeholder="Twoje imie i nazwisko" className="field-input" />
+                <span>Imię i nazwisko</span>
+                <input name="name" type="text" required placeholder="Twoje imię i nazwisko" className="field-input" />
               </label>
               <label className="field-shell">
                 <span>Telefon</span>
@@ -59,7 +59,7 @@ export function ReservationSection({ content, clientProfile }: ReservationSectio
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="field-shell">
-                <span>Liczba gosci</span>
+                <span>Liczba gości</span>
                 <input name="people" type="number" min="1" required placeholder="4" className="field-input" />
               </label>
               <label className="field-shell">
@@ -69,8 +69,8 @@ export function ReservationSection({ content, clientProfile }: ReservationSectio
             </div>
 
             <div className="rounded-[1.5rem] border border-primary/20 bg-primary/5 p-4 text-sm leading-7 text-muted">
-              Na obecnym etapie potwierdzenie rezerwacji odbywa sie przez telefon albo Facebook.
-              Formularz porzadkuje dane i przygotowuje je do przekazania obsludze.
+              Na obecnym etapie potwierdzenie rezerwacji odbywa się przez telefon albo Facebook.
+              Formularz porządkuje dane i przygotowuje je do przekazania obsłudze.
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -81,7 +81,7 @@ export function ReservationSection({ content, clientProfile }: ReservationSectio
                 href={`tel:${clientProfile.contact.reservation_contact || clientProfile.contact.primary_phone}`}
                 className="outline-button"
               >
-                Zadzwon teraz
+                Zadzwoń teraz
               </a>
             </div>
 
