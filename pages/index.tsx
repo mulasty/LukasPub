@@ -11,6 +11,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { LocationSection } from "@/components/LocationSection";
 import { MenuSection } from "@/components/MenuSection";
 import { Navbar } from "@/components/Navbar";
+import { NightPulseBar } from "@/components/NightPulseBar";
 import { ReservationSection } from "@/components/ReservationSection";
 import { SocialFeedSection } from "@/components/SocialFeedSection";
 import { loadSiteData } from "@/lib/dataLoader";
@@ -223,6 +224,11 @@ export default function HomePage({
             clientProfile={siteData.clientProfile}
             events={siteData.events}
             media={siteData.media}
+          />
+          <NightPulseBar
+            clientProfile={siteData.clientProfile}
+            events={siteData.events}
+            openingHours={siteData.openingHours}
           />
           <AboutSection
             content={siteData.siteContent.about_club}
