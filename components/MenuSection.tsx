@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-import type { MenuData, MenuItem, SiteContent } from "@/lib/types";
+import Image from "next/image";
+
+import type { MenuData, MenuItem, ResolvedMedia, SiteContent } from "@/lib/types";
 
 import { SectionHeading } from "@/components/SectionHeading";
 
@@ -77,9 +79,18 @@ function formatPrice(item: MenuItem, currency: string) {
 interface MenuSectionProps {
   content: SiteContent["menu_section"];
   menu: MenuData;
+  media: ResolvedMedia;
 }
 
-export function MenuSection({ content, menu }: MenuSectionProps) {
+const imageMap: Record<string, string[]> = {
+  drinks: ["cocktails", "aperol_spritz", "signature_cocktail"],
+  beer: ["cocktails", "aperol_spritz"],
+  cocktails: ["signature_cocktail", "cocktails", "aperol_spritz"],
+  shots: ["cocktails", "signature_cocktail"],
+  food: ["food_01", "food_02", "food_03", "food_04", "food_05", "food_06"]
+};
+
+export function MenuSection({ content, menu, media }: MenuSectionProps) {
   const [activeTab, setActiveTab] = useState<keyof typeof tabConfig>("drinks");
 
   const sections = Object.entries(tabConfig).map(([key, config]) => ({
@@ -93,6 +104,15 @@ export function MenuSection({ content, menu }: MenuSectionProps) {
       .filter((group) => group.items.length > 0)
   }));
 
+  const activeImages =
+    imageMap[activeTab]
+      ?.map((name) => media.menuImages.find((image) => image.name === name))
+      .filter((image): image is NonNullable<typeof image> => Boolean(image))
+      .slice(0, 3) ?? [];
+
+  const fallbackImages = media.menuImages.filter((image) => !image.isPlaceholder).slice(0, 3);
+  const showcaseImages = activeImages.length ? activeImages : fallbackImages;
+
   return (
     <section id="menu" className="section-shell section-space">
       <div className="space-y-10">
@@ -101,6 +121,47 @@ export function MenuSection({ content, menu }: MenuSectionProps) {
           title={content.title}
           description={content.description}
         />
+
+        {showcaseImages.length ? (
+          <div className="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
+            <figure className="js-reveal relative min-h-[20rem] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04]">
+              <Image
+                src={showcaseImages[0].src}
+                alt={showcaseImages[0].description}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 60vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+              <figcaption className="absolute bottom-0 left-0 right-0 p-6">
+                <p className="font-headline text-3xl uppercase tracking-[0.08em] text-text">
+                  {sections.find((section) => section.id === activeTab)?.title}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-muted">
+                  Zdjęcia z oferty baru i kuchni budują klimat sekcji menu także na mobile.
+                </p>
+              </figcaption>
+            </figure>
+
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1">
+              {showcaseImages.slice(1).map((image) => (
+                <figure
+                  key={image.name}
+                  className="js-reveal relative min-h-[9.5rem] overflow-hidden rounded-[1.6rem] border border-white/10 bg-white/[0.04]"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.description}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 30vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                </figure>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <div className="hidden flex-wrap gap-3 md:flex">
           {sections.map((section) => (

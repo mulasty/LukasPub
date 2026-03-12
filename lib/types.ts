@@ -234,6 +234,10 @@ export interface MediaManifest {
     file: string;
     description?: string;
   };
+  opening_hours_image?: {
+    file: string;
+    description?: string;
+  };
   gallery_images: Array<{
     name: string;
     file: string;
@@ -474,6 +478,7 @@ export interface ResolvedGalleryImage {
 export interface ResolvedMedia {
   heroVideoPath: string | null;
   heroImagePath: string;
+  openingHoursImagePath: string | null;
   logoPath: string | null;
   logoDarkPath: string | null;
   galleryImages: ResolvedGalleryImage[];

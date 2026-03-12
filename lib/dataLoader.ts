@@ -66,6 +66,10 @@ function resolveMedia(
   const heroImageAsset = heroImageFile
     ? resolvePublicAsset(`${imagesDir}/${heroImageFile}`, placeholderImagePath)
     : { src: placeholderImagePath, isPlaceholder: true };
+  const openingHoursImageFile = mediaManifest.opening_hours_image?.file?.trim();
+  const openingHoursImagePath = openingHoursImageFile
+    ? resolvePublicAsset(`${imagesDir}/${openingHoursImageFile}`, placeholderImagePath).src
+    : null;
 
   const logoFile = mediaManifest.logo.file?.trim();
   const logoPath = logoFile
@@ -79,6 +83,7 @@ function resolveMedia(
   return {
     heroVideoPath: heroVideo ? `${videosDir}/${heroVideo}` : null,
     heroImagePath: heroImageAsset.src,
+    openingHoursImagePath,
     logoPath,
     logoDarkPath,
     galleryImages,

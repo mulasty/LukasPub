@@ -43,30 +43,31 @@ export function Navbar({ brandName, uiLayout, siteContent, media }: NavbarProps)
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border border-white/10 bg-black/35 px-5 py-3 backdrop-blur-xl">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-[1.75rem] border border-white/10 bg-black/40 px-4 py-3 backdrop-blur-xl sm:px-5">
         <a href="#hero" className="flex items-center gap-3">
           {media.logoPath ? (
-            <span className="relative h-10 w-20 overflow-hidden rounded-xl border border-white/10 bg-white/5 px-2">
+            <span className="relative h-11 w-[9.5rem] overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-2">
               <Image
                 src={media.logoPath}
                 alt={brandName}
                 fill
                 className="object-contain p-1"
-                sizes="80px"
+                sizes="152px"
               />
             </span>
-          ) : null}
-          <span className="font-headline text-2xl uppercase tracking-[0.12em] text-text">
-            {brandName}
-          </span>
+          ) : (
+            <span className="font-headline text-2xl uppercase tracking-[0.08em] text-text">
+              {brandName}
+            </span>
+          )}
         </a>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-2 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
-              className="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-text"
+              className="rounded-full px-4 py-2 text-sm text-muted transition hover:bg-white/5 hover:text-text"
             >
               {link.label}
             </a>

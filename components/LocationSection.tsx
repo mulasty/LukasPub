@@ -1,4 +1,6 @@
-import type { ClientProfile, OpeningHours, SiteContent } from "@/lib/types";
+import Image from "next/image";
+
+import type { ClientProfile, OpeningHours, ResolvedMedia, SiteContent } from "@/lib/types";
 
 import { SectionHeading } from "@/components/SectionHeading";
 
@@ -6,12 +8,14 @@ interface LocationSectionProps {
   content: SiteContent["location_section"];
   clientProfile: ClientProfile;
   openingHours: OpeningHours;
+  media: ResolvedMedia;
 }
 
 export function LocationSection({
   content,
   clientProfile,
-  openingHours
+  openingHours,
+  media
 }: LocationSectionProps) {
   const mapQuery = encodeURIComponent(clientProfile.location.full_address);
 
@@ -26,6 +30,20 @@ export function LocationSection({
           />
 
           <div className="grid gap-4">
+            {media.openingHoursImagePath ? (
+              <article className="panel js-reveal overflow-hidden p-0">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={media.openingHoursImagePath}
+                    alt="Materiały i informacje klubowe"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                </div>
+              </article>
+            ) : null}
             <article className="panel js-reveal">
               <p className="text-sm uppercase tracking-[0.22em] text-muted">Adres</p>
               <p className="mt-3 text-lg leading-8 text-text">{clientProfile.location.full_address}</p>
@@ -59,4 +77,3 @@ export function LocationSection({
     </section>
   );
 }
-

@@ -32,6 +32,11 @@
     "description": "Główne zdjęcie hero do użycia jako fallback, gdy nie ma video."
   },
 
+  "opening_hours_image": {
+    "file": "opening-hours-card.jpg",
+    "description": "Zdjęcie karty z godzinami i informacjami klubowymi."
+  },
+
   "gallery_images": [
     {
       "name": "dance_floor",
@@ -74,6 +79,36 @@
       "name": "aperol_spritz",
       "file": "aperol-spritz.jpg",
       "description": "Zdjęcie drinka Aperol Spritz"
+    },
+    {
+      "name": "food_01",
+      "file": "menu-food-01.jpg",
+      "description": "Zdjęcie dania z menu"
+    },
+    {
+      "name": "food_02",
+      "file": "menu-food-02.jpg",
+      "description": "Zdjęcie dania z menu"
+    },
+    {
+      "name": "food_03",
+      "file": "menu-food-03.jpg",
+      "description": "Zdjęcie dania z menu"
+    },
+    {
+      "name": "food_04",
+      "file": "menu-food-04.jpg",
+      "description": "Zdjęcie dania z menu"
+    },
+    {
+      "name": "food_05",
+      "file": "menu-food-05.jpg",
+      "description": "Zdjęcie dania z menu"
+    },
+    {
+      "name": "food_06",
+      "file": "menu-food-06.jpg",
+      "description": "Zdjęcie dania z menu"
     },
     {
       "name": "beer",

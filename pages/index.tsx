@@ -143,7 +143,11 @@ export default function HomePage({
           />
           <EventsSection content={siteData.siteContent.events_section} events={siteData.events} />
           <GallerySection content={siteData.siteContent.gallery} images={siteData.media.galleryImages} />
-          <MenuSection content={siteData.siteContent.menu_section} menu={siteData.menu} />
+          <MenuSection
+            content={siteData.siteContent.menu_section}
+            menu={siteData.menu}
+            media={siteData.media}
+          />
           <ReservationSection
             content={siteData.siteContent.vip_reservations}
             clientProfile={siteData.clientProfile}
@@ -152,6 +156,7 @@ export default function HomePage({
             content={siteData.siteContent.location_section}
             clientProfile={siteData.clientProfile}
             openingHours={siteData.openingHours}
+            media={siteData.media}
           />
           <SocialFeedSection
             content={siteData.siteContent.social_media}
