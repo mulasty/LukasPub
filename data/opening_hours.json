@@ -1,0 +1,93 @@
+{
+  "status": "partially_verified",
+  "timezone": "Europe/Warsaw",
+  "verified_schedule": {
+    "thursday": {
+      "open": "19:00",
+      "close": "",
+      "status": "verified_start_time_only",
+      "notes": "Public Facebook posts repeatedly announce karaoke every Thursday from 19:00."
+    },
+    "friday": {
+      "open": "",
+      "close": "",
+      "status": "verified_active_day_only",
+      "notes": "Public Facebook posts confirm the venue invites guests on Fridays, but full official opening and closing hours were not found in a reliable fixed schedule."
+    },
+    "saturday": {
+      "open": "",
+      "close": "",
+      "status": "verified_active_day_only",
+      "notes": "Public Facebook posts confirm the venue invites guests on Saturdays, but full official opening and closing hours were not found in a reliable fixed schedule."
+    }
+  },
+  "unverified_days": {
+    "monday": {
+      "open": "",
+      "close": "",
+      "status": "not_confirmed"
+    },
+    "tuesday": {
+      "open": "",
+      "close": "",
+      "status": "not_confirmed"
+    },
+    "wednesday": {
+      "open": "",
+      "close": "",
+      "status": "not_confirmed"
+    },
+    "sunday": {
+      "open": "",
+      "close": "",
+      "status": "not_confirmed"
+    }
+  },
+  "observed_patterns": {
+    "regular_event_start_times": [
+      {
+        "day": "thursday",
+        "event": "karaoke",
+        "start_time": "19:00",
+        "confidence": "high"
+      }
+    ],
+    "active_nightlife_days": [
+      {
+        "day": "friday",
+        "confidence": "high"
+      },
+      {
+        "day": "saturday",
+        "confidence": "high"
+      }
+    ]
+  },
+  "needs_owner_confirmation": [
+    "exact opening hour on Friday",
+    "exact closing hour on Friday",
+    "exact opening hour on Saturday",
+    "exact closing hour on Saturday",
+    "whether the club is open on Sunday",
+    "whether the club is ever open Monday-Wednesday",
+    "last entry policy",
+    "special holiday/event exceptions"
+  ],
+  "agent_notes": {
+    "important": [
+      "Do not render unverified full business hours as facts.",
+      "For the website draft, it is safer to display 'Karaoke every Thursday from 19:00' and 'Weekend parties on Friday and Saturday' until owner confirms exact hours.",
+      "After the client meeting, this file should be upgraded to a fully verified official schedule."
+    ],
+    "safe_display_copy": {
+      "thursday": "Karaoke every Thursday from 19:00",
+      "friday": "Weekend party",
+      "saturday": "Weekend party"
+    }
+  },
+  "research_metadata": {
+    "research_date": "2026-03-12",
+    "verification_level": "public_web_partial",
+    "primary_source": "Facebook public page and posts"
+  }
+}

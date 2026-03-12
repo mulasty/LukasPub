@@ -1,0 +1,85 @@
+{
+  "language": "pl",
+
+  "hero": {
+    "title": "Lukas Pub Dance Club",
+    "subtitle": "Imprezowe serce Łomży",
+    "description": "Lokalny pub i klub taneczny z parkietem, karaoke oraz bogatym wyborem drinków i przekąsek.",
+    "primary_cta": "Rezerwuj stolik",
+    "secondary_cta": "Zobacz wydarzenia",
+    "background_media": "club-crowd-video"
+  },
+
+  "about_club": {
+    "title": "O klubie",
+    "description": "Lukas Pub Dance Club to miejsce spotkań, dobrej muzyki i nocnej zabawy w Łomży. Klub oferuje imprezy weekendowe, karaoke oraz szeroki wybór drinków i przekąsek w swobodnej, imprezowej atmosferze.",
+    "features": [
+      "Parkiet taneczny",
+      "Wieczory karaoke",
+      "Bogate menu drinków",
+      "Przekąski i jedzenie",
+      "Imprezy weekendowe"
+    ]
+  },
+
+  "events_section": {
+    "title": "Wydarzenia",
+    "subtitle": "Sprawdź co dzieje się w klubie",
+    "description": "W Lukas Pub regularnie odbywają się wydarzenia, które przyciągają gości spragnionych dobrej zabawy i muzyki."
+  },
+
+  "gallery": {
+    "title": "Atmosfera klubu",
+    "subtitle": "Zobacz jak wygląda noc w Lukas Pub",
+    "description": "Zdjęcia i materiały z imprez pokazujące klimat parkietu, muzyki i spotkań ze znajomymi."
+  },
+
+  "menu_section": {
+    "title": "Menu",
+    "subtitle": "Drinki, piwo i przekąski",
+    "description": "Klub oferuje szeroki wybór drinków, piw, alkoholi oraz przekąsek idealnych na wieczór ze znajomymi.",
+    "cta": "Zobacz pełne menu"
+  },
+
+  "vip_reservations": {
+    "title": "Rezerwacja stolika",
+    "description": "Planujesz wieczór ze znajomymi? Zarezerwuj stolik i ciesz się imprezą bez stresu o miejsce.",
+    "cta": "Zarezerwuj stolik"
+  },
+
+  "location_section": {
+    "title": "Lokalizacja",
+    "subtitle": "Znajdziesz nas w Łomży",
+    "description": "Lukas Pub Dance Club znajduje się przy Alei Legionów 60B w Łomży. To miejsce, gdzie spotykają się miłośnicy dobrej muzyki i nocnej zabawy."
+  },
+
+  "social_media": {
+    "title": "Media społecznościowe",
+    "subtitle": "Bądź na bieżąco",
+    "description": "Obserwuj klub w mediach społecznościowych, aby być na bieżąco z wydarzeniami i imprezami."
+  },
+
+  "footer": {
+    "description": "Lukas Pub Dance Club – miejsce spotkań, muzyki i nocnej zabawy w Łomży.",
+    "copyright": "© Lukas Pub Dance Club"
+  },
+
+  "seo": {
+    "meta_title": "Lukas Pub Dance Club | Klub i pub w Łomży",
+    "meta_description": "Lukas Pub Dance Club w Łomży – karaoke, imprezy weekendowe, drinki i parkiet taneczny.",
+    "keywords": [
+      "klub Łomża",
+      "dyskoteka Łomża",
+      "karaoke Łomża",
+      "impreza Łomża",
+      "pub Łomża"
+    ]
+  },
+
+  "cta_global": {
+    "reservation": "Rezerwuj stolik",
+    "events": "Zobacz wydarzenia",
+    "menu": "Sprawdź menu",
+    "contact": "Skontaktuj się"
+  }
+}

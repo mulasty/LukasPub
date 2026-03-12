@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+
+  "project": {
+    "client": "Lukas Pub Dance Club",
+    "city": "Łomża",
+    "language": "pl"
+  },
+
+  "brand_voice": {
+    "tone": [
+      "imprezowy",
+      "energetyczny",
+      "zachęcający",
+      "lokalny"
+    ],
+    "style_rules": [
+      "krótkie dynamiczne zdania",
+      "emocje i energia nocnej zabawy",
+      "podkreślenie muzyki i atmosfery",
+      "używanie emoji tylko w social media"
+    ]
+  },
+
+  "event_content_rules": {
+    "description_length": "60-120 words",
+    "required_elements": [
+      "nazwa wydarzenia",
+      "dzień tygodnia",
+      "godzina rozpoczęcia jeśli dostępna",
+      "zaproszenie do zabawy",
+      "lokalizacja Łomża"
+    ],
+    "example_structure": [
+      "headline",
+      "short description",
+      "call_to_action"
+    ]
+  },
+
+  "social_media_posts": {
+    "platforms": [
+      "facebook",
+      "instagram"
+    ],
+    "post_length": "short",
+    "include": [
+      "emoji",
+      "hashtag",
+      "call_to_action"
+    ],
+    "hashtags_default": [
+      "#Lomza",
+      "#LukasPub",
+      "#Impreza",
+      "#Weekend",
+      "#Karaoke"
+    ]
+  },
+
+  "seo_content": {
+    "blog_topics": [
+      "najlepsze miejsca na imprezę w Łomży",
+      "karaoke w Łomży",
+      "gdzie wyjść w weekend w Łomży"
+    ],
+    "target_keywords": [
+      "klub Łomża",
+      "dyskoteka Łomża",
+      "karaoke Łomża",
+      "impreza Łomża",
+      "pub Łomża"
+    ],
+    "article_length": "600-900 words"
+  },
+
+  "event_templates": {
+    "karaoke": {
+      "headline_template": "Karaoke Night w Lukas Pub",
+      "cta": "Zabierz znajomych i pokaż swój talent!"
+    },
+    "weekend_party": {
+      "headline_template": "Weekend Party w Lukas Pub",
+      "cta": "Widzimy się na parkiecie!"
+    }
+  },
+
+  "agent_notes": [
+    "Always mention Lukas Pub Dance Club.",
+    "Mention city Łomża when possible.",
+    "Avoid repeating the same wording in consecutive posts.",
+    "Posts should encourage visitors to attend events."
+  ]
+}

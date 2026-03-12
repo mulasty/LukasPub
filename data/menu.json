@@ -1,0 +1,193 @@
+{
+  "currency": "PLN",
+
+  "categories": {
+
+    "coffee_tea": [
+      {"name":"Espresso","price":9},
+      {"name":"Podwójne espresso","price":15},
+      {"name":"Kawa czarna","price":10},
+      {"name":"Kawa biała","price":11},
+      {"name":"Latte","price":12},
+      {"name":"Herbata","price":10,"notes":"czarna / earl grey / zielona / owocowa / miętowa"},
+      {"name":"Herbata zimowa","price":16}
+    ],
+
+    "soft_drinks":[
+      {"name":"Coca Cola","price_small":9,"price_large":21},
+      {"name":"Coca Cola Zero","price":9},
+      {"name":"Sprite","price_small":9,"price_large":21},
+      {"name":"Fanta","price":9},
+      {"name":"Cappy","price":9,"notes":"jabłko / pomarańcza / grejpfrut"},
+      {"name":"Kinley","price":9,"notes":"tonic / pink"},
+      {"name":"Kropla Beskidu","price":7,"notes":"gaz / niegaz"}
+    ],
+
+    "juices":[
+      {"name":"Sok pomarańczowy","price_small":8,"price_large":20},
+      {"name":"Sok jabłkowy","price_small":8,"price_large":20},
+      {"name":"Sok ananasowy","price_small":8,"price_large":20},
+      {"name":"Sok czarna porzeczka","price_small":8,"price_large":20}
+    ],
+
+    "energy_drinks":[
+      {"name":"Red Bull","price":14},
+      {"name":"Burn","price":12}
+    ],
+
+    "draft_beer":[
+      {"name":"Warka","price_03":11,"price_05":12},
+      {"name":"Żywiec","price_03":11,"price_05":12},
+      {"name":"Żywiec Biały","price_03":12,"price_05":13},
+      {"name":"Heineken","price_03":12,"price_05":13}
+    ],
+
+    "bottled_beer":[
+      {"name":"Żywiec","price":13},
+      {"name":"Żywiec APA","price":14},
+      {"name":"Żywiec Biały","price":14},
+      {"name":"Żywiec Porter","price":14},
+      {"name":"Paulaner","price":14},
+      {"name":"Warka Strong","price":13},
+      {"name":"Heineken","price":14},
+      {"name":"Namysłów","price":13},
+      {"name":"Desperados","price":14},
+      {"name":"Corona Extra","price":12}
+    ],
+
+    "non_alcoholic_beer":[
+      {"name":"Żywiec 0%","price":13},
+      {"name":"Żywiec smakowe 0%","price":14},
+      {"name":"Warka Radler 0%","price":13},
+      {"name":"Heineken 0%","price":14},
+      {"name":"Corona Extra 0%","price":12}
+    ],
+
+    "wine":[
+      {"name":"Wino białe","price_glass":14,"price_bottle":65,"notes":"półwytrawne / półsłodkie"},
+      {"name":"Wino czerwone","price_glass":14,"price_bottle":65,"notes":"półwytrawne / półsłodkie"},
+      {"name":"Prosecco","price_glass":15,"price_bottle":69},
+      {"name":"Grzane wino","price":20}
+    ],
+
+    "rum":[
+      {"name":"Captain Morgan White","price":15},
+      {"name":"Captain Morgan Gold","price":15},
+      {"name":"Kraken Spiced Black","price":22}
+    ],
+
+    "tequila":[
+      {"name":"Sierra Silver","price":18},
+      {"name":"Sierra Gold","price":18},
+      {"name":"Jose Cuervo Silver","price":21},
+      {"name":"Jose Cuervo Gold","price":21}
+    ],
+
+    "gin":[
+      {"name":"Gordon's Dry","price":15},
+      {"name":"Gordon's Pink","price":15},
+      {"name":"Bulldog London","price":22}
+    ],
+
+    "vodka":[
+      {"name":"Żołądkowa De Luxe","price_shot":8,"price_bottle":85},
+      {"name":"Stock Prestige","price_shot":9,"price_bottle":90},
+      {"name":"Bocian","price_shot":10,"price_bottle":100},
+      {"name":"Amundsen","price_shot":10,"price_bottle":100},
+      {"name":"J.A. Baczewski","price_shot":10,"price_bottle":100},
+      {"name":"Finlandia","price_shot":12,"price_bottle":110},
+      {"name":"Ciroc","price_shot":26}
+    ],
+
+    "whisky":[
+      {"name":"Jack Daniels","price_shot":22,"price_bottle":260},
+      {"name":"Jack Daniels Fire","price_shot":22},
+      {"name":"Jack Daniels Apple","price_shot":22},
+      {"name":"Johnnie Walker Red Label","price_shot":14,"price_bottle":180},
+      {"name":"Johnnie Walker Black Label","price_shot":21},
+      {"name":"Johnnie Walker Blonde","price_shot":18},
+      {"name":"Johnnie Walker Blue","price_shot":125},
+      {"name":"Ballantines","price_shot":17},
+      {"name":"Famous Grouse","price_shot":17},
+      {"name":"Jameson","price_shot":19},
+      {"name":"Jim Beam","price_shot":18,"price_bottle":190},
+      {"name":"Jim Beam Apple","price_shot":19,"price_bottle":240},
+      {"name":"Jim Beam Honey","price_shot":19,"price_bottle":240},
+      {"name":"Jim Beam Peach","price_shot":19,"price_bottle":240},
+      {"name":"Jim Beam Black","price_shot":21},
+      {"name":"Jim Beam Double Oak","price_shot":21},
+      {"name":"Monkey Shoulder","price_shot":26},
+      {"name":"Bearface Canadian","price_shot":26},
+      {"name":"Glendalough","price_shot":25},
+      {"name":"Singleton","price_shot":23}
+    ],
+
+    "cocktails":[
+      {"name":"Aperol Spritz","price":29},
+      {"name":"Cuba Libre","price":25},
+      {"name":"Mojito","price":27},
+      {"name":"Tequila Sunrise","price":26},
+      {"name":"Pine & Coco","price":27},
+      {"name":"Whisky & Cola","price":25}
+    ],
+
+    "shots":[
+      {"name":"B52","price":16},
+      {"name":"Wściekła suka","price":16},
+      {"name":"Wściekły pies","price":14},
+      {"name":"Kamikaze (4)","price":28},
+      {"name":"Grzechu warte (4)","price":30},
+      {"name":"Landrynki (4)","price":29},
+      {"name":"Kwaśne miny (4)","price":31}
+    ],
+
+    "signature_cocktails":[
+      {"name":"Garden Smash","price":30},
+      {"name":"Margarita Strawberry","price":27},
+      {"name":"Night Safari","price":25},
+      {"name":"Coffe Cloud","price":24},
+      {"name":"Raspberry Ginger","price":60,"notes":"2+1 gratis"},
+      {"name":"Bison Cooler","price":27},
+      {"name":"Tom Collins","price":29},
+      {"name":"Long Island Ice Tea","price":35},
+      {"name":"Whisky Sour","price":28},
+      {"name":"Vodka Sour","price":28},
+      {"name":"Jagerbomb","price":31}
+    ],
+
+    "snacks":[
+      {"name":"Nachosy z sosem serowym","price":20},
+      {"name":"Orzeszki","price":10},
+      {"name":"Popcorn","price":10}
+    ],
+
+    "food":[
+      {"name":"Swojski smalec z ogórkiem i chlebem","price":18},
+      {"name":"Tatar wołowy","price":29},
+      {"name":"Stripsy z kurczaka + frytki","price":30},
+      {"name":"Skrzydełka z kurczaka","price":25},
+      {"name":"Frytki scoopsy","price":11},
+      {"name":"Krążki cebulowe","price":12},
+      {"name":"Frytki z batata + ser","price":18},
+      {"name":"Frytki + stripsy + ser","price":22}
+    ],
+
+    "sharing_boards":[
+      {"name":"Deska pyszności","price":65},
+      {"name":"Talerz śródziemnomorski","price":69},
+      {"name":"Deska swojska","price":64}
+    ],
+
+    "salads":[
+      {"name":"Sałatka Awokado","price":36},
+      {"name":"Sałatka Beet","price":39},
+      {"name":"Sałatka Patki","price":37}
+    ],
+
+    "desserts":[
+      {"name":"Krążki z serem camembert","price":24},
+      {"name":"Szarlotka na ciepło z lodami","price":22}
+    ]
+
+  }
+}

@@ -1,0 +1,19 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1500" fill="#0B0B0F"/>
+  <rect x="52" y="52" width="1096" height="1396" rx="48" fill="url(#panel)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <circle cx="320" cy="290" r="180" fill="#00E0FF" fill-opacity="0.22"/>
+  <circle cx="900" cy="440" r="220" fill="#FF007A" fill-opacity="0.2"/>
+  <circle cx="730" cy="1130" r="240" fill="#FFD000" fill-opacity="0.12"/>
+  <path d="M204 1122C302.5 955.5 415.5 846.5 543 795C670.5 743.5 810 749.5 962 813" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="24" stroke-linecap="round"/>
+  <path d="M214 1184C339 1047 472.5 975.5 614.5 969.5C756.5 963.5 873 1005 964 1094" stroke="#FF007A" stroke-opacity="0.28" stroke-width="18" stroke-linecap="round"/>
+  <text x="120" y="230" fill="#FFFFFF" fill-opacity="0.76" font-family="Arial, sans-serif" font-size="74" letter-spacing="10">LUKAS PUB</text>
+  <text x="120" y="312" fill="#B5B5C3" font-family="Arial, sans-serif" font-size="34" letter-spacing="12">MIEJSCE NA ZDJECIE KLUBU</text>
+  <text x="120" y="1328" fill="#FFFFFF" fill-opacity="0.78" font-family="Arial, sans-serif" font-size="42" letter-spacing="8">PODMIEN NA PRAWDZIWE ZDJECIE LUB KADR VIDEO</text>
+  <defs>
+    <linearGradient id="panel" x1="126" y1="101" x2="1042" y2="1377" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00E0FF" stop-opacity="0.2"/>
+      <stop offset="0.48" stop-color="#FF007A" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0B0B0F" stop-opacity="0.22"/>
+    </linearGradient>
+  </defs>
+</svg>

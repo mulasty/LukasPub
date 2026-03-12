@@ -1,0 +1,112 @@
+{
+  "project": {
+    "name": "lukas-pub-website",
+    "client_name": "Lukas Pub Dance Club",
+    "type": "nightclub website",
+    "location": "Łomża, Poland",
+    "language": "pl"
+  },
+
+  "purpose": {
+    "primary_goal": "promote the club and increase attendance",
+    "secondary_goals": [
+      "display weekly events",
+      "show club atmosphere",
+      "present drinks and food menu",
+      "enable table reservations",
+      "connect with social media"
+    ]
+  },
+
+  "tech_stack": {
+    "framework": "Next.js",
+    "language": "TypeScript",
+    "styling": "TailwindCSS",
+    "animations": [
+      "GSAP ScrollTrigger",
+      "Framer Motion"
+    ],
+    "scroll_engine": "Lenis smooth scroll",
+    "deployment": "Vercel"
+  },
+
+  "data_sources": {
+    "client_profile": "/data/client_profile.json",
+    "opening_hours": "/data/opening_hours.json",
+    "events": "/data/events.json",
+    "menu": "/data/menu.json",
+    "site_content": "/data/site_content.json"
+  },
+
+  "site_structure": [
+    "hero",
+    "about_club",
+    "events",
+    "gallery",
+    "menu",
+    "vip_reservation",
+    "location",
+    "social_media_feed",
+    "footer"
+  ],
+
+  "components_to_generate": [
+    "HeroSection",
+    "AboutSection",
+    "EventsSection",
+    "GallerySection",
+    "MenuSection",
+    "ReservationSection",
+    "LocationSection",
+    "SocialFeedSection",
+    "Footer"
+  ],
+
+  "design_system": {
+    "style": "nightclub neon aesthetic",
+    "colors": {
+      "background": "#0B0B0F",
+      "neon_pink": "#FF007A",
+      "neon_blue": "#00E0FF",
+      "accent_gold": "#FFD000",
+      "text": "#F5F5F5"
+    },
+    "fonts": {
+      "headline": "Bebas Neue",
+      "body": "Inter"
+    }
+  },
+
+  "animation_rules": [
+    "hero video slow zoom",
+    "parallax scrolling background",
+    "neon hover glow effects",
+    "scroll reveal animations",
+    "smooth section transitions"
+  ],
+
+  "media_directories": {
+    "images": "/assets/images",
+    "videos": "/assets/video"
+  },
+
+  "seo": {
+    "target_keywords": [
+      "klub Łomża",
+      "dyskoteka Łomża",
+      "karaoke Łomża",
+      "impreza Łomża",
+      "pub Łomża"
+    ]
+  },
+
+  "agent_instructions": [
+    "read all JSON files in /data before generating components",
+    "use data-driven rendering for menu and events",
+    "generate reusable React components",
+    "ensure responsive design",
+    "use Tailwind utility classes",
+    "optimize images and video loading",
+    "avoid inventing data not present in JSON files"
+  ]
+}

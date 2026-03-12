@@ -1,0 +1,89 @@
+{
+  "status": "partially_verified",
+
+  "weekly_events": [
+    {
+      "id": "karaoke-night",
+      "name": "Karaoke Night",
+      "day": "thursday",
+      "start_time": "19:00",
+      "description": "Wieczór karaoke prowadzony przez prowadzącego. Goście mogą śpiewać ulubione utwory i bawić się w klubowej atmosferze.",
+      "category": "karaoke",
+      "confidence": "high",
+      "source": "multiple public Facebook announcements"
+    },
+
+    {
+      "id": "friday-club-night",
+      "name": "Friday Club Night",
+      "day": "friday",
+      "start_time": "",
+      "description": "Weekendowa impreza taneczna z muzyką klubową i parkietem dla gości.",
+      "category": "dance_party",
+      "confidence": "medium",
+      "source": "facebook promotional posts inviting guests every Friday"
+    },
+
+    {
+      "id": "saturday-party",
+      "name": "Saturday Party",
+      "day": "saturday",
+      "start_time": "",
+      "description": "Główna impreza weekendowa z DJ i parkietem tanecznym.",
+      "category": "dance_party",
+      "confidence": "medium",
+      "source": "facebook promotional posts inviting guests every Saturday"
+    }
+  ],
+
+  "special_events": [
+    {
+      "type": "seasonal",
+      "examples": [
+        "Valentines Party",
+        "Carnival / Ostatki Party"
+      ],
+      "confidence": "medium",
+      "notes": "Special themed parties appear occasionally in social media promotions."
+    }
+  ],
+
+  "event_features_observed": [
+    "karaoke host",
+    "dance floor",
+    "club music",
+    "drinks and bar",
+    "group nightlife atmosphere"
+  ],
+
+  "event_media_types": [
+    "dance floor videos",
+    "karaoke clips",
+    "party crowd photos",
+    "DJ moments"
+  ],
+
+  "needs_owner_confirmation": [
+    "exact name of Friday event",
+    "exact name of Saturday event",
+    "DJ names or residents",
+    "frequency of special themed parties",
+    "whether guest DJs perform",
+    "whether ticketed events exist"
+  ],
+
+  "agent_notes": {
+    "website_usage": [
+      "Use Karaoke Night as a highlighted weekly event.",
+      "Display Friday and Saturday as weekend party nights.",
+      "Allow CMS editing of event names in case branding changes."
+    ],
+    "ui_hint": "Events should appear as cards with day, title, and short description."
+  },
+
+  "research_metadata": {
+    "research_date": "2026-03-12",
+    "verification_level": "public_social_media_analysis",
+    "primary_source": "Facebook posts"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "design_system_version": "1.0",
+
+  "theme": {
+    "style": "nightclub_neon_dark"
+  },
+
+  "colors": {
+    "background": "#0B0B0F",
+    "surface": "#141419",
+    "card": "#1A1A21",
+
+    "primary": "#FF007A",
+    "secondary": "#00E0FF",
+    "accent": "#FFD000",
+
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#B5B5C3",
+    "text_muted": "#6E6E7A"
+  },
+
+  "typography": {
+    "font_headline": "Bebas Neue",
+    "font_body": "Inter",
+
+    "sizes": {
+      "hero_title": "72px",
+      "section_title": "42px",
+      "subtitle": "22px",
+      "body": "16px",
+      "small": "14px"
+    }
+  },
+
+  "spacing": {
+    "section_padding": "120px",
+    "container_width": "1200px",
+    "grid_gap": "24px"
+  },
+
+  "border_radius": {
+    "card": "12px",
+    "button": "8px",
+    "image": "10px"
+  },
+
+  "shadows": {
+    "card_shadow": "0 10px 30px rgba(0,0,0,0.4)",
+    "glow_pink": "0 0 20px rgba(255,0,122,0.6)",
+    "glow_blue": "0 0 20px rgba(0,224,255,0.6)"
+  },
+
+  "buttons": {
+    "primary": {
+      "background": "#FF007A",
+      "text": "#FFFFFF",
+      "hover_effect": "neon_glow"
+    },
+
+    "secondary": {
+      "background": "#00E0FF",
+      "text": "#0B0B0F",
+      "hover_effect": "soft_glow"
+    }
+  },
+
+  "cards": {
+    "background": "#1A1A21",
+    "border_radius": "12px",
+    "hover_effect": "lift"
+  },
+
+  "animations": {
+
+    "scroll_reveal": {
+      "duration": "0.8s",
+      "ease": "ease-out"
+    },
+
+    "hover_lift": {
+      "translateY": "-6px",
+      "duration": "0.3s"
+    },
+
+    "neon_glow": {
+      "type": "shadow_pulse",
+      "color": "#FF007A"
+    },
+
+    "parallax": {
+      "speed": "0.3"
+    }
+  },
+
+  "layout": {
+    "container": {
+      "max_width": "1200px",
+      "padding": "20px"
+    },
+
+    "grid": {
+      "desktop_columns": 3,
+      "tablet_columns": 2,
+      "mobile_columns": 1
+    }
+  },
+
+  "hero": {
+    "height": "100vh",
+    "overlay_opacity": "0.45",
+    "video_blur": "0px"
+  },
+
+  "menu": {
+    "card_style": "glass_dark",
+    "price_color": "#FFD000"
+  },
+
+  "effects": {
+    "neon_edges": true,
+    "glass_effect": true,
+    "blur_background": false
+  },
+
+  "agent_notes": [
+    "Maintain a dark nightclub aesthetic.",
+    "Use neon highlights sparingly.",
+    "Avoid overly bright backgrounds.",
+    "Ensure contrast for readability.",
+    "Animations should be smooth and subtle."
+  ]
+}

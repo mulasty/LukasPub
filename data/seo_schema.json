@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+
+  "organization": {
+    "@type": "Organization",
+    "name": "Lukas Pub Dance Club",
+    "url": "",
+    "logo": "",
+    "sameAs": [
+      "https://www.facebook.com/61583102257665/"
+    ]
+  },
+
+  "local_business": {
+    "@type": "NightClub",
+    "name": "Lukas Pub Dance Club",
+    "description": "Lokalny pub i klub taneczny w Łomży z karaoke, imprezami weekendowymi oraz szerokim wyborem drinków i przekąsek.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Aleja Legionów 60B",
+      "addressLocality": "Łomża",
+      "postalCode": "18-400",
+      "addressCountry": "PL"
+    },
+    "telephone": "+48 694 760 743",
+    "servesCuisine": [
+      "bar food",
+      "snacks"
+    ],
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/61583102257665/"
+    ]
+  },
+
+  "opening_hours_reference": {
+    "data_source": "/data/opening_hours.json",
+    "note": "Opening hours should be injected dynamically from opening_hours.json once verified."
+  },
+
+  "events_schema": {
+    "data_source": "/data/events.json",
+    "schema_type": "Event",
+    "note": "Each weekly event should generate an Event schema entry."
+  },
+
+  "menu_schema": {
+    "data_source": "/data/menu.json",
+    "schema_type": "Menu",
+    "note": "Menu items can be mapped to MenuItem schema."
+  },
+
+  "seo_meta_defaults": {
+    "meta_title": "Lukas Pub Dance Club | Klub w Łomży",
+    "meta_description": "Lukas Pub Dance Club w Łomży – karaoke, imprezy weekendowe, drinki i parkiet taneczny.",
+    "keywords": [
+      "klub Łomża",
+      "dyskoteka Łomża",
+      "karaoke Łomża",
+      "impreza Łomża",
+      "pub Łomża"
+    ]
+  },
+
+  "agent_instructions": [
+    "Generate JSON-LD schema in the page <head>.",
+    "Use schema.org NightClub type for the venue.",
+    "Pull event data dynamically from events.json.",
+    "Pull opening hours from opening_hours.json once confirmed.",
+    "Include Organization and LocalBusiness schema."
+  ]
+}

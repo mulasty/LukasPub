@@ -1,0 +1,119 @@
+{
+  "status": "initial_structure",
+
+  "hero_media": {
+    "type": "video",
+    "recommended_files": [
+      "club-crowd.mp4",
+      "dance-floor.mp4",
+      "dj-performance.mp4"
+    ],
+    "description": "Dynamiczne video z parkietu tanecznego pokazujące atmosferę klubu.",
+    "source_status": "client_required"
+  },
+
+  "logo": {
+    "file": "",
+    "format_preferred": [
+      "svg",
+      "png"
+    ],
+    "notes": "Logo klubu do wykorzystania w hero oraz navbarze.",
+    "source_status": "client_required"
+  },
+
+  "gallery_images": [
+    {
+      "name": "dance_floor",
+      "file": "dance-floor.jpg",
+      "description": "Zdjęcie parkietu z tańczącymi gośćmi",
+      "source_status": "client_required"
+    },
+    {
+      "name": "dj_booth",
+      "file": "dj-booth.jpg",
+      "description": "DJ podczas imprezy",
+      "source_status": "client_required"
+    },
+    {
+      "name": "club_interior",
+      "file": "club-interior.jpg",
+      "description": "Wnętrze klubu",
+      "source_status": "client_required"
+    },
+    {
+      "name": "bar_drinks",
+      "file": "bar-drinks.jpg",
+      "description": "Drinki przygotowywane w barze",
+      "source_status": "client_required"
+    }
+  ],
+
+  "menu_images": [
+    {
+      "name": "cocktails",
+      "file": "cocktails.jpg",
+      "description": "Zdjęcie drinków z menu"
+    },
+    {
+      "name": "beer",
+      "file": "beer.jpg",
+      "description": "Zdjęcie piwa lane lub butelkowego"
+    },
+    {
+      "name": "food",
+      "file": "food.jpg",
+      "description": "Zdjęcie przekąsek lub dań z menu"
+    }
+  ],
+
+  "events_media": [
+    {
+      "name": "karaoke_night",
+      "file": "karaoke-night.jpg",
+      "description": "Atmosfera karaoke",
+      "source_status": "client_required"
+    },
+    {
+      "name": "weekend_party",
+      "file": "weekend-party.jpg",
+      "description": "Weekendowa impreza",
+      "source_status": "client_required"
+    }
+  ],
+
+  "social_media_media": {
+    "type": "dynamic_feed",
+    "sources": [
+      "facebook"
+    ],
+    "description": "Automatyczne pobieranie zdjęć i filmów z social media."
+  },
+
+  "file_structure_recommendation": {
+    "images_directory": "/assets/images",
+    "videos_directory": "/assets/video"
+  },
+
+  "recommended_image_specs": {
+    "hero_background": {
+      "resolution": "1920x1080",
+      "format": "mp4"
+    },
+    "gallery_images": {
+      "resolution": "1200x800",
+      "format": "jpg"
+    },
+    "menu_images": {
+      "resolution": "1000x1000",
+      "format": "jpg"
+    }
+  },
+
+  "agent_notes": [
+    "If hero video is missing use nightclub placeholder video.",
+    "Prefer real images from the club rather than stock images.",
+    "Use lazy loading for gallery images.",
+    "Optimize all images with Next.js image component."
+  ]
+}

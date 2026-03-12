@@ -1,0 +1,143 @@
+{
+  "club_name": "Lukas pub - dance - club",
+  "brand_name_preferred": "Lukas Pub Dance Club",
+  "legal_name": "",
+  "type": [
+    "pub",
+    "dance club",
+    "nightlife venue"
+  ],
+  "category_labels_found_online": [
+    "pub",
+    "dyskoteka",
+    "taniec",
+    "muzyka",
+    "drinki"
+  ],
+  "location": {
+    "country": "Poland",
+    "region": "Podlaskie",
+    "city": "Łomża",
+    "postal_code": "18-400",
+    "street_address": "Aleja Legionów 60B",
+    "full_address": "Aleja Legionów 60B, 18-400 Łomża, Poland",
+    "google_maps_place_id": "",
+    "coordinates": null
+  },
+  "contact": {
+    "primary_phone": "+48 694 760 743",
+    "secondary_phone": "",
+    "email": "",
+    "website": "",
+    "reservation_contact": "+48 694 760 743"
+  },
+  "social_media": {
+    "facebook": {
+      "status": "confirmed",
+      "page_name": "Lukas pub - dance - club",
+      "page_url": "https://www.facebook.com/p/Lukas-pub-dance-club-61583102257665/",
+      "alt_page_url": "https://www.facebook.com/61583102257665/",
+      "page_id_like_string": "61583102257665",
+      "audience_snapshot": {
+        "likes_or_followers_text": "1159 polubien",
+        "talking_about_text": "20 osob mowi o tym",
+        "checkins_or_visits_text": "19 osob bylo tutaj"
+      }
+    },
+    "instagram": {
+      "status": "not_confirmed",
+      "profile_url": "",
+      "notes": "W publicznie dostepnych wynikach znaleziono wzmianki i materialy o Lukas Pub, ale nie potwierdzono oficjalnego profilu klubu na Instagramie."
+    },
+    "tiktok": {
+      "status": "not_confirmed",
+      "profile_url": "",
+      "notes": "W publicznie dostepnych wynikach nie potwierdzono oficjalnego profilu klubu na TikToku."
+    }
+  },
+  "public_positioning": {
+    "short_description": "Lokalny pub i klub taneczny w Łomży z karaoke w czwartki, weekendowym parkietem, drinkami, jedzeniem i imprezami tematycznymi.",
+    "tone_of_voice_observed": [
+      "lokalny",
+      "bezpośredni",
+      "imprezowy",
+      "gościnny",
+      "eventowy"
+    ],
+    "main_customer_promises_observed": [
+      "dobra muzyka",
+      "taneczny parkiet",
+      "pyszne drinki",
+      "jedzenie / zakąski",
+      "karaoke",
+      "przytulny klimat"
+    ]
+  },
+  "offer_snapshot": {
+    "core_offers": [
+      "weekend club nights",
+      "karaoke nights",
+      "drinks",
+      "food and snacks",
+      "dance floor entertainment"
+    ],
+    "weekly_rhythm_observed": {
+      "thursday": "karaoke from around 19:00",
+      "friday": "dance floor / club night",
+      "saturday": "dance floor / club night"
+    },
+    "special_formats_observed": [
+      "Valentine's / themed weekends",
+      "guest host / karaoke lead",
+      "DJ-led weekend atmosphere"
+    ]
+  },
+  "target_audience_hypothesis": {
+    "primary_age_range": "20-35",
+    "secondary_age_range": "30-45",
+    "segments": [
+      "young adults in Łomża",
+      "groups of friends",
+      "weekend nightlife guests",
+      "karaoke participants",
+      "casual pub and party customers"
+    ],
+    "confidence": "medium"
+  },
+  "brand_assets_status": {
+    "logo_received": false,
+    "official_brand_book": false,
+    "official_photo_bank": false,
+    "official_video_bank": false,
+    "menu_received": true
+  },
+  "discovery_metadata": {
+    "research_date": "2026-03-12",
+    "verification_status": "partial_public_web_verification",
+    "needs_client_confirmation": [
+      "official email address",
+      "official Instagram account",
+      "official TikTok account",
+      "legal business name",
+      "preferred brand spelling",
+      "exact opening hours policy",
+      "website domain if owned",
+      "reservation process details"
+    ]
+  },
+  "agent_notes": {
+    "important": [
+      "Use Facebook as the primary verified social source for now.",
+      "Do not invent Instagram or TikTok links until owner confirms them.",
+      "Keep contact and brand fields editable after client meeting.",
+      "Preferred display brand can be 'Lukas Pub Dance Club', but public Facebook branding currently appears as 'Lukas pub - dance - club'."
+    ],
+    "content_direction": [
+      "nightlife",
+      "karaoke",
+      "party weekends",
+      "drinks and food",
+      "local Łomża audience"
+    ]
+  }
+}

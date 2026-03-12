@@ -1,0 +1,163 @@
+{
+  "layout_version": "1.0",
+
+  "page": {
+    "type": "one_page_scroll",
+    "scroll_engine": "smooth_scroll",
+    "navigation": "sticky_top_navbar"
+  },
+
+  "sections": [
+
+    {
+      "id": "hero",
+      "component": "HeroSection",
+      "layout": "fullscreen",
+      "height": "100vh",
+      "background": {
+        "type": "video",
+        "source": "hero_media"
+      },
+      "content_source": "site_content.hero",
+      "animations": [
+        "slow_zoom_video",
+        "fade_in_text",
+        "scroll_indicator"
+      ]
+    },
+
+    {
+      "id": "about_club",
+      "component": "AboutSection",
+      "layout": "two_column",
+      "image_position": "right",
+      "content_source": "site_content.about_club",
+      "animations": [
+        "slide_in_left",
+        "slide_in_right"
+      ]
+    },
+
+    {
+      "id": "events",
+      "component": "EventsSection",
+      "layout": "card_grid",
+      "columns": 3,
+      "data_source": "events.weekly_events",
+      "content_source": "site_content.events_section",
+      "animations": [
+        "scroll_reveal_cards",
+        "hover_glow"
+      ]
+    },
+
+    {
+      "id": "gallery",
+      "component": "GallerySection",
+      "layout": "masonry_grid",
+      "columns": 3,
+      "data_source": "media_manifest.gallery_images",
+      "content_source": "site_content.gallery",
+      "animations": [
+        "image_parallax",
+        "hover_zoom"
+      ]
+    },
+
+    {
+      "id": "menu",
+      "component": "MenuSection",
+      "layout": "tabbed_menu",
+      "data_source": "menu.categories",
+      "content_source": "site_content.menu_section",
+      "tabs": [
+        "drinks",
+        "beer",
+        "cocktails",
+        "shots",
+        "food"
+      ],
+      "animations": [
+        "card_reveal",
+        "hover_lift"
+      ]
+    },
+
+    {
+      "id": "reservation",
+      "component": "ReservationSection",
+      "layout": "center_form",
+      "content_source": "site_content.vip_reservations",
+      "form_fields": [
+        "name",
+        "phone",
+        "people",
+        "date"
+      ],
+      "animations": [
+        "fade_in_form"
+      ]
+    },
+
+    {
+      "id": "location",
+      "component": "LocationSection",
+      "layout": "map_with_text",
+      "content_source": "site_content.location_section",
+      "map_provider": "google_maps"
+    },
+
+    {
+      "id": "social",
+      "component": "SocialFeedSection",
+      "layout": "grid",
+      "data_source": "client_profile.social_media",
+      "content_source": "site_content.social_media",
+      "animations": [
+        "scroll_reveal"
+      ]
+    },
+
+    {
+      "id": "footer",
+      "component": "Footer",
+      "layout": "simple_footer",
+      "content_source": "site_content.footer"
+    }
+
+  ],
+
+  "navbar": {
+    "style": "transparent_on_top",
+    "sticky": true,
+    "links": [
+      "about_club",
+      "events",
+      "gallery",
+      "menu",
+      "reservation",
+      "location"
+    ]
+  },
+
+  "mobile_layout": {
+    "hero_height": "90vh",
+    "gallery_columns": 1,
+    "menu_layout": "accordion",
+    "events_columns": 1
+  },
+
+  "ui_effects": {
+    "hover_glow": true,
+    "neon_style": true,
+    "smooth_scroll": true,
+    "parallax_backgrounds": true
+  },
+
+  "agent_notes": [
+    "Use Next.js Image component for all images.",
+    "Implement smooth scrolling between sections.",
+    "Animations should be subtle and performant.",
+    "Ensure full responsiveness for mobile devices."
+  ]
+}
