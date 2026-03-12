@@ -33,6 +33,11 @@ body {
   color: #ffffff;
 }
 
+[data-parallax-y],
+[data-parallax-x] {
+  will-change: transform;
+}
+
 @layer components {
   .section-shell {
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
@@ -114,4 +119,41 @@ body {
 
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
+}
+
+.scroll-cue {
+  @apply flex flex-col items-center gap-3 text-[0.65rem] uppercase tracking-[0.34em] text-muted;
+}
+
+.scroll-cue__track {
+  @apply flex h-16 flex-col items-center justify-between;
+}
+
+.scroll-cue__dot {
+  height: 0.35rem;
+  width: 0.35rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.78);
+  animation: scrollCuePulse 1.8s ease-in-out infinite;
+}
+
+.scroll-cue__dot--middle {
+  animation-delay: 0.2s;
+}
+
+.scroll-cue__dot--bottom {
+  animation-delay: 0.4s;
+}
+
+@keyframes scrollCuePulse {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(6px);
+  }
 }

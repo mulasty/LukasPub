@@ -1,5 +1,3 @@
-import { useEffect, useRef } from "react";
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -12,36 +10,12 @@ interface HeroSectionProps {
 }
 
 export function HeroSection({ siteContent, clientProfile, media }: HeroSectionProps) {
-  const visualRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    let active = true;
-
-    void import("gsap").then(({ gsap }) => {
-      if (!active || !visualRef.current) {
-        return;
-      }
-
-      gsap.to(visualRef.current, {
-        scale: 1.08,
-        duration: 16,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut"
-      });
-    });
-
-    return () => {
-      active = false;
-    };
-  }, []);
-
   return (
     <section
       id="hero"
       className="relative flex min-h-screen items-end overflow-hidden pt-28 sm:items-center"
     >
-      <div ref={visualRef} className="absolute inset-0">
+      <div data-parallax-y="72" className="absolute inset-0 scale-[1.08]">
         {media.heroVideoPath ? (
           <video
             className="h-full w-full object-cover opacity-40"
@@ -63,12 +37,28 @@ export function HeroSection({ siteContent, clientProfile, media }: HeroSectionPr
             sizes="100vw"
           />
         )}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,224,255,0.18),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(255,0,122,0.24),transparent_24%),linear-gradient(160deg,rgba(11,11,15,0.2),rgba(11,11,15,0.95))]" />
-        <div className="absolute inset-0 bg-hero-grid bg-[size:52px_52px] opacity-10" />
+        <div
+          data-parallax-y="36"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,224,255,0.18),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(255,0,122,0.24),transparent_24%),linear-gradient(160deg,rgba(11,11,15,0.2),rgba(11,11,15,0.95))]"
+        />
+        <div
+          data-parallax-y="24"
+          className="absolute inset-0 bg-hero-grid bg-[size:52px_52px] opacity-10"
+        />
       </div>
 
+      <div
+        data-parallax-y="48"
+        data-parallax-x="-24"
+        className="pointer-events-none absolute right-[8%] top-[18%] hidden h-48 w-48 rounded-full border border-white/10 bg-white/[0.02] blur-[2px] lg:block"
+      />
+      <div
+        data-parallax-y="26"
+        className="pointer-events-none absolute left-[10%] top-[24%] hidden h-px w-28 bg-gradient-to-r from-transparent via-white/60 to-transparent lg:block"
+      />
+
       <div className="section-shell relative z-10 grid gap-12 pb-16 pt-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:pb-24">
-        <div className="max-w-3xl space-y-7">
+        <div data-parallax-y="18" className="max-w-3xl space-y-7">
           <motion.span
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,6 +105,7 @@ export function HeroSection({ siteContent, clientProfile, media }: HeroSectionPr
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.3 }}
+          data-parallax-y="34"
           className="panel max-w-xl justify-self-end"
         >
           <div className="space-y-5">
@@ -150,10 +141,15 @@ export function HeroSection({ siteContent, clientProfile, media }: HeroSectionPr
 
       <a
         href="#about_club"
-        className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted sm:flex"
+        data-scroll-cue
+        className="scroll-cue absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 sm:flex"
       >
-        Przewiń
-        <span className="h-14 w-px bg-gradient-to-b from-white/50 to-transparent" />
+        <span>Scroll down</span>
+        <span className="scroll-cue__track">
+          <span className="scroll-cue__dot scroll-cue__dot--top" />
+          <span className="scroll-cue__dot scroll-cue__dot--middle" />
+          <span className="scroll-cue__dot scroll-cue__dot--bottom" />
+        </span>
       </a>
     </section>
   );

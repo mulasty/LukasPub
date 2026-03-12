@@ -23,9 +23,8 @@ export function GallerySection({ content, images }: GallerySectionProps) {
           {images.map((image, index) => (
             <figure
               key={image.name}
-              className={`js-reveal overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] ${
-                index % 3 === 0 ? "xl:translate-y-10" : index % 3 === 2 ? "xl:-translate-y-10" : ""
-              }`}
+              data-parallax-y={index % 3 === 0 ? "26" : index % 3 === 1 ? "-18" : "22"}
+              className="js-reveal overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03]"
             >
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image

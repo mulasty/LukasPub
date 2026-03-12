@@ -82,6 +82,68 @@ export default function HomePage({
           );
         });
 
+        gsap.utils.toArray<HTMLElement>("[data-parallax-y]").forEach((element) => {
+          const shiftY = Number(element.dataset.parallaxY ?? 0);
+
+          if (!shiftY) {
+            return;
+          }
+
+          gsap.fromTo(
+            element,
+            { y: shiftY * -1 },
+            {
+              y: shiftY,
+              ease: "none",
+              scrollTrigger: {
+                trigger: element.closest("section") ?? element,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1.1
+              }
+            }
+          );
+        });
+
+        gsap.utils.toArray<HTMLElement>("[data-parallax-x]").forEach((element) => {
+          const shiftX = Number(element.dataset.parallaxX ?? 0);
+
+          if (!shiftX) {
+            return;
+          }
+
+          gsap.fromTo(
+            element,
+            { x: shiftX * -1 },
+            {
+              x: shiftX,
+              ease: "none",
+              scrollTrigger: {
+                trigger: element.closest("section") ?? element,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1.1
+              }
+            }
+          );
+        });
+
+        gsap.utils.toArray<HTMLElement>("[data-scroll-cue]").forEach((element) => {
+          gsap.to(element, {
+            opacity: 0,
+            y: 18,
+            ease: "none",
+            scrollTrigger: {
+              trigger: element.closest("section") ?? element,
+              start: "top top",
+              end: "+=220",
+              scrub: true
+            }
+          });
+        });
+
+        ScrollTrigger.refresh();
+
         cleanup = () => {
           window.cancelAnimationFrame(frame);
           lenis.destroy();
@@ -118,9 +180,20 @@ export default function HomePage({
 
       <div className="relative overflow-hidden">
         <div className="pointer-events-none fixed inset-0 opacity-60">
-          <div className="absolute left-[-12rem] top-24 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
-          <div className="absolute right-[-8rem] top-1/3 h-72 w-72 rounded-full bg-secondary/20 blur-3xl" />
-          <div className="absolute bottom-12 left-1/4 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
+          <div
+            data-parallax-x="34"
+            data-parallax-y="46"
+            className="absolute left-[-12rem] top-24 h-80 w-80 rounded-full bg-primary/20 blur-3xl"
+          />
+          <div
+            data-parallax-x="-28"
+            data-parallax-y="30"
+            className="absolute right-[-8rem] top-1/3 h-72 w-72 rounded-full bg-secondary/20 blur-3xl"
+          />
+          <div
+            data-parallax-y="36"
+            className="absolute bottom-12 left-1/4 h-64 w-64 rounded-full bg-accent/10 blur-3xl"
+          />
         </div>
 
         <Navbar
